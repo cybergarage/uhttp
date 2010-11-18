@@ -3,17 +3,8 @@
 /* LIBCURL */
 #undef CG_HTTP_CURL
 
-/* LIBXML2 */
-#undef CG_XMLPARSER_LIBXML2
-
 /* Define to 1 if you have the <arpa/inet.h> header file. */
 #undef HAVE_ARPA_INET_H
-
-/* Define to 1 if you have the <expat/expat.h> header file. */
-#undef HAVE_EXPAT_EXPAT_H
-
-/* Define to 1 if you have the <expat.h> header file. */
-#undef HAVE_EXPAT_H
 
 /* Define to 1 if you have the `fopen' function. */
 #undef HAVE_FOPEN
@@ -42,17 +33,11 @@
 /* IP_PKTINFO */
 #undef HAVE_IP_PKTINFO
 
-/* Define to 1 if you have the `expat' library (-lexpat). */
-#undef HAVE_LIBEXPAT
-
 /* Define to 1 if you have the `iconv' library (-liconv). */
 #undef HAVE_LIBICONV
 
 /* Define to 1 if you have the `pthread' library (-lpthread). */
 #undef HAVE_LIBPTHREAD
-
-/* Define to 1 if you have the `uuid' library (-luuid). */
-#undef HAVE_LIBUUID
 
 /* Define to 1 if you have the `ws2_32' library (-lws2_32). */
 #undef HAVE_LIBWS2_32
@@ -134,9 +119,6 @@
 
 /* Define to 1 if you have the <unistd.h> header file. */
 #undef HAVE_UNISTD_H
-
-/* Define to 1 if you have the <uuid/uuid.h> header file. */
-#undef HAVE_UUID_UUID_H
 
 /* Define to 1 if your C compiler doesn't accept -c and -o together. */
 #undef NO_MINUS_C_MINUS_O

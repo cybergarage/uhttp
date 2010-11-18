@@ -2,13 +2,13 @@
 
 #include <cybergarage/net/cinterface.h>
 
-#include "ClinkTestCase.h"
+#include "uHTTPTestCase.h"
 
 ////////////////////////////////////////
 // testNetworkInterface
 ////////////////////////////////////////
 
-void ClinkTestCase::testNetworkInterface()
+void uHTTPTestCase::testNetworkInterface()
 {
 	CgByte nullMacAddr[CG_NET_MACADDR_SIZE];
 	CgByte macAddr[CG_NET_MACADDR_SIZE];

@@ -598,8 +598,6 @@ LIBOBJS
 HTTP_LIBS
 HTTP_CFLAGS
 CLOG_DEBUG_FLAGS
-XML_LIBS
-XML_CFLAGS
 EGREP
 GREP
 CXXCPP
@@ -695,7 +693,6 @@ enable_option_checking
 enable_dependency_tracking
 with_libtool
 with_timings
-enable_libxml2
 enable_compiler_warnings
 enable_clog_debug
 enable_clog_debug_stack
@@ -1336,7 +1333,6 @@ Optional Features:
   --enable-FEATURE[=ARG]  include FEATURE [ARG=yes]
   --disable-dependency-tracking  speeds up one-time build
   --enable-dependency-tracking   do not reject slow dependency extractors
-  --enable-libxml2        enable Libxml2 support (default = no)
   --enable-compiler-warnings
                           enable compiler warnings (default = yes)
   --enable-clog-debug     enable common clog debug messages (default = no)
@@ -2656,8 +2652,8 @@ fi
 
 
 # Define the identity of the package.
- PACKAGE=clinkc
- VERSION=2.3
+ PACKAGE=uhttp
+ VERSION=1.0
 
 
 cat >>confdefs.h <<_ACEOF
@@ -4438,6 +4434,7 @@ fi
 # Check whether libtool should be used
 #############################################################################
 
+
 # Check whether --with-libtool was given.
 if test "${with_libtool+set}" = set; then :
   withval=$with_libtool;
@@ -4457,6 +4454,7 @@ fi
 #############################################################################
 # Check whether timing info should be printed
 #############################################################################
+
 
 # Check whether --with-timings was given.
 if test "${with_timings+set}" = set; then :
@@ -4883,162 +4881,6 @@ done
 
 
 ##############################
-# Checks for libxml2 libraries.
-##############################
-
-# Check whether --enable-libxml2 was given.
-if test "${enable_libxml2+set}" = set; then :
-  enableval=$enable_libxml2;
-		if test $enableval = no; then
-			USE_LIBXML2=no
-		else
-			USE_LIBXML2=yes
-		fi
-
-else
-
-		USE_LIBXML2=no
-
-
-fi
-
-
-if  test $USE_LIBXML2 = yes ; then
-	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for xmlSAXUserParseMemory in -lxml2" >&5
-$as_echo_n "checking for xmlSAXUserParseMemory in -lxml2... " >&6; }
-if test "${ac_cv_lib_xml2_xmlSAXUserParseMemory+set}" = set; then :
-  $as_echo_n "(cached) " >&6
-else
-  ac_check_lib_save_LIBS=$LIBS
-LIBS="-lxml2  $LIBS"
-cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-/* end confdefs.h.  */
-
-/* Override any GCC internal prototype to avoid an error.
-   Use char because int might match the return type of a GCC
-   builtin and then its argument prototype would still apply.  */
-#ifdef __cplusplus
-extern "C"
-#endif
-char xmlSAXUserParseMemory ();
-int
-main ()
-{
-return xmlSAXUserParseMemory ();
-  ;
-  return 0;
-}
-_ACEOF
-if ac_fn_cxx_try_link "$LINENO"; then :
-  ac_cv_lib_xml2_xmlSAXUserParseMemory=yes
-else
-  ac_cv_lib_xml2_xmlSAXUserParseMemory=no
-fi
-rm -f core conftest.err conftest.$ac_objext \
-    conftest$ac_exeext conftest.$ac_ext
-LIBS=$ac_check_lib_save_LIBS
-fi
-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_xml2_xmlSAXUserParseMemory" >&5
-$as_echo "$ac_cv_lib_xml2_xmlSAXUserParseMemory" >&6; }
-if test "x$ac_cv_lib_xml2_xmlSAXUserParseMemory" = x""yes; then :
-
-
-$as_echo "#define CG_XMLPARSER_LIBXML2 1" >>confdefs.h
-
-
-		XML_CFLAGS=`pkg-config libxml-2.0 --cflags`
-
-
-		XML_LIBS=`pkg-config libxml-2.0 --libs`
-
-
-else
-
-		as_fn_error "CyberLink needs libxml2-dev >= $LIBXML2_VERSION" "$LINENO" 5
-
-fi
-
-fi
-
-##############################
-# Checks for Expat libraries.
-##############################
-
-if  test $USE_LIBXML2 != yes ; then
-	for ac_header in expat/expat.h
-do :
-  ac_fn_cxx_check_header_mongrel "$LINENO" "expat/expat.h" "ac_cv_header_expat_expat_h" "$ac_includes_default"
-if test "x$ac_cv_header_expat_expat_h" = x""yes; then :
-  cat >>confdefs.h <<_ACEOF
-#define HAVE_EXPAT_EXPAT_H 1
-_ACEOF
-
-fi
-
-done
-
-	for ac_header in expat.h
-do :
-  ac_fn_cxx_check_header_mongrel "$LINENO" "expat.h" "ac_cv_header_expat_h" "$ac_includes_default"
-if test "x$ac_cv_header_expat_h" = x""yes; then :
-  cat >>confdefs.h <<_ACEOF
-#define HAVE_EXPAT_H 1
-_ACEOF
-
-fi
-
-done
-
-	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for XML_ParserCreate in -lexpat" >&5
-$as_echo_n "checking for XML_ParserCreate in -lexpat... " >&6; }
-if test "${ac_cv_lib_expat_XML_ParserCreate+set}" = set; then :
-  $as_echo_n "(cached) " >&6
-else
-  ac_check_lib_save_LIBS=$LIBS
-LIBS="-lexpat  $LIBS"
-cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-/* end confdefs.h.  */
-
-/* Override any GCC internal prototype to avoid an error.
-   Use char because int might match the return type of a GCC
-   builtin and then its argument prototype would still apply.  */
-#ifdef __cplusplus
-extern "C"
-#endif
-char XML_ParserCreate ();
-int
-main ()
-{
-return XML_ParserCreate ();
-  ;
-  return 0;
-}
-_ACEOF
-if ac_fn_cxx_try_link "$LINENO"; then :
-  ac_cv_lib_expat_XML_ParserCreate=yes
-else
-  ac_cv_lib_expat_XML_ParserCreate=no
-fi
-rm -f core conftest.err conftest.$ac_objext \
-    conftest$ac_exeext conftest.$ac_ext
-LIBS=$ac_check_lib_save_LIBS
-fi
-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_expat_XML_ParserCreate" >&5
-$as_echo "$ac_cv_lib_expat_XML_ParserCreate" >&6; }
-if test "x$ac_cv_lib_expat_XML_ParserCreate" = x""yes; then :
-  cat >>confdefs.h <<_ACEOF
-#define HAVE_LIBEXPAT 1
-_ACEOF
-
-  LIBS="-lexpat $LIBS"
-
-else
-  as_fn_error "CyberLink needs Expat >= $EXPAT_VERSION" "$LINENO" 5
-fi
-
-fi
-
-##############################
 # Enable compiler warnings
 ##############################
 
@@ -5189,8 +5031,6 @@ else
 
 
 fi
-
-
 
 
 ##############################
@@ -5446,62 +5286,6 @@ _ACEOF
   LIBS="-lpthread $LIBS"
 
 fi
-
-
-##############################
-# Checks for UUID
-##############################
-
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for main in -luuid" >&5
-$as_echo_n "checking for main in -luuid... " >&6; }
-if test "${ac_cv_lib_uuid_main+set}" = set; then :
-  $as_echo_n "(cached) " >&6
-else
-  ac_check_lib_save_LIBS=$LIBS
-LIBS="-luuid  $LIBS"
-cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-/* end confdefs.h.  */
-
-
-int
-main ()
-{
-return main ();
-  ;
-  return 0;
-}
-_ACEOF
-if ac_fn_cxx_try_link "$LINENO"; then :
-  ac_cv_lib_uuid_main=yes
-else
-  ac_cv_lib_uuid_main=no
-fi
-rm -f core conftest.err conftest.$ac_objext \
-    conftest$ac_exeext conftest.$ac_ext
-LIBS=$ac_check_lib_save_LIBS
-fi
-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_uuid_main" >&5
-$as_echo "$ac_cv_lib_uuid_main" >&6; }
-if test "x$ac_cv_lib_uuid_main" = x""yes; then :
-  cat >>confdefs.h <<_ACEOF
-#define HAVE_LIBUUID 1
-_ACEOF
-
-  LIBS="-luuid $LIBS"
-
-fi
-
-for ac_header in uuid/uuid.h
-do :
-  ac_fn_cxx_check_header_mongrel "$LINENO" "uuid/uuid.h" "ac_cv_header_uuid_uuid_h" "$ac_includes_default"
-if test "x$ac_cv_header_uuid_uuid_h" = x""yes; then :
-  cat >>confdefs.h <<_ACEOF
-#define HAVE_UUID_UUID_H 1
-_ACEOF
-
-fi
-
-done
 
 
 ##############################
@@ -6051,7 +5835,7 @@ fi
 # Makefiles
 ##############################
 
-ac_config_files="$ac_config_files clinkc.pc Makefile include/Makefile lib/Makefile lib/unix/Makefile testunit/Makefile testunit/unix/Makefile sample/Makefile sample/clock/Makefile sample/clock/unix/Makefile sample/upnpdump/Makefile sample/upnpdump/unix/Makefile sample/upnpavdump/Makefile sample/upnpavdump/unix/Makefile sample/upnpigddump/Makefile sample/upnpigddump/unix/Makefile"
+ac_config_files="$ac_config_files uhttp.pc Makefile include/Makefile lib/Makefile lib/unix/Makefile testunit/Makefile testunit/unix/Makefile"
 
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
@@ -6773,22 +6557,13 @@ do
   case $ac_config_target in
     "config.h") CONFIG_HEADERS="$CONFIG_HEADERS config.h" ;;
     "depfiles") CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
-    "clinkc.pc") CONFIG_FILES="$CONFIG_FILES clinkc.pc" ;;
+    "uhttp.pc") CONFIG_FILES="$CONFIG_FILES uhttp.pc" ;;
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
     "include/Makefile") CONFIG_FILES="$CONFIG_FILES include/Makefile" ;;
     "lib/Makefile") CONFIG_FILES="$CONFIG_FILES lib/Makefile" ;;
     "lib/unix/Makefile") CONFIG_FILES="$CONFIG_FILES lib/unix/Makefile" ;;
     "testunit/Makefile") CONFIG_FILES="$CONFIG_FILES testunit/Makefile" ;;
     "testunit/unix/Makefile") CONFIG_FILES="$CONFIG_FILES testunit/unix/Makefile" ;;
-    "sample/Makefile") CONFIG_FILES="$CONFIG_FILES sample/Makefile" ;;
-    "sample/clock/Makefile") CONFIG_FILES="$CONFIG_FILES sample/clock/Makefile" ;;
-    "sample/clock/unix/Makefile") CONFIG_FILES="$CONFIG_FILES sample/clock/unix/Makefile" ;;
-    "sample/upnpdump/Makefile") CONFIG_FILES="$CONFIG_FILES sample/upnpdump/Makefile" ;;
-    "sample/upnpdump/unix/Makefile") CONFIG_FILES="$CONFIG_FILES sample/upnpdump/unix/Makefile" ;;
-    "sample/upnpavdump/Makefile") CONFIG_FILES="$CONFIG_FILES sample/upnpavdump/Makefile" ;;
-    "sample/upnpavdump/unix/Makefile") CONFIG_FILES="$CONFIG_FILES sample/upnpavdump/unix/Makefile" ;;
-    "sample/upnpigddump/Makefile") CONFIG_FILES="$CONFIG_FILES sample/upnpigddump/Makefile" ;;
-    "sample/upnpigddump/unix/Makefile") CONFIG_FILES="$CONFIG_FILES sample/upnpigddump/unix/Makefile" ;;
 
   *) as_fn_error "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
   esac
@@ -7505,4 +7280,5 @@ if test -n "$ac_unrecognized_opts" && test "$enable_option_checking" != no; then
   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: unrecognized options: $ac_unrecognized_opts" >&5
 $as_echo "$as_me: WARNING: unrecognized options: $ac_unrecognized_opts" >&2;}
 fi
+
 

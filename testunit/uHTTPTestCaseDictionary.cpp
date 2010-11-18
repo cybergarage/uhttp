@@ -1,4 +1,4 @@
-#include "ClinkTestCase.h"
+#include "uHTTPTestCase.h"
 
 #include <cybergarage/util/cdictionary.h>
 
@@ -6,10 +6,10 @@
 // testNetworkInterface
 ////////////////////////////////////////
 
-#define CLINK_TESTCASE_DICTIONARY_KEY "hello"
-#define CLINK_TESTCASE_DICTIONARY_VALUE "hello_value"
+#define UHTTP_TESTCASE_DICTIONARY_KEY "hello"
+#define UHTTP_TESTCASE_DICTIONARY_VALUE "hello_value"
 
-void ClinkTestCase::testDictionary()
+void uHTTPTestCase::testDictionary()
 {
 	CgDictionary *dir;
 	char *dirVal;
@@ -23,12 +23,12 @@ void ClinkTestCase::testDictionary()
 	dir = cg_dictionary_new();
 	CPPUNIT_ASSERT((dir != NULL));
 	CPPUNIT_ASSERT((cg_dictionary_size(dir) == 0));
-	cg_dictionary_setvalue(dir, CLINK_TESTCASE_DICTIONARY_KEY, CLINK_TESTCASE_DICTIONARY_VALUE);
+	cg_dictionary_setvalue(dir, UHTTP_TESTCASE_DICTIONARY_KEY, UHTTP_TESTCASE_DICTIONARY_VALUE);
 	CPPUNIT_ASSERT((cg_dictionary_size(dir) == 1));
-	cg_dictionary_setvalue(dir, CLINK_TESTCASE_DICTIONARY_KEY, CLINK_TESTCASE_DICTIONARY_VALUE);
+	cg_dictionary_setvalue(dir, UHTTP_TESTCASE_DICTIONARY_KEY, UHTTP_TESTCASE_DICTIONARY_VALUE);
 	CPPUNIT_ASSERT((cg_dictionary_size(dir) == 1));
-	dirVal = cg_dictionary_getvalue(dir, CLINK_TESTCASE_DICTIONARY_KEY);
+	dirVal = cg_dictionary_getvalue(dir, UHTTP_TESTCASE_DICTIONARY_KEY);
 	CPPUNIT_ASSERT((0 < cg_strlen(dirVal)));
-	CPPUNIT_ASSERT(cg_streq(dirVal, CLINK_TESTCASE_DICTIONARY_VALUE));
+	CPPUNIT_ASSERT(cg_streq(dirVal, UHTTP_TESTCASE_DICTIONARY_VALUE));
 	cg_dictionary_delete(dir);
 }

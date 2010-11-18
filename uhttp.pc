@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: clinkc
+Description: uHTTP
+Version: 1.0
+Requires:
+Libs: -L${exec_prefix}/lib -luhttp
+Cflags: -I${includedir}

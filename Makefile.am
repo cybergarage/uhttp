@@ -1,12 +1,13 @@
-SUBDIRS = include lib sample 
+#SUBDIRS = include lib sample 
 #SUBDIRS = include lib sample testunit
+SUBDIRS = include lib testunit
 
-devdocsdir = $(datadir)/doc/clinkc-dev
-docsdir = $(datadir)/doc/clinkc0
+devdocsdir = $(datadir)/doc/uhttp-dev
+docsdir = $(datadir)/doc/uhttp0
 
 EXTRA_DIST = debian/changelog \
-	debian/clinkc0.install \
-	debian/clinkc-dev.install \
+	debian/uhttp0.install \
+	debian/uhttp-dev.install \
 	debian/compat \
 	debian/control \
 	debian/copyright \
@@ -15,7 +16,7 @@ EXTRA_DIST = debian/changelog \
 	include/cybergarage/upnp/cupnp.h.in
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = clinkc.pc
+pkgconfig_DATA = uhttp.pc
 
 dist_docs_DATA = \
 	COPYING
@@ -26,16 +27,11 @@ dist_devdocs_DATA = \
 	Doxyfile
 
 nobase_devdocs_DATA = \
-	doxygen/html/* \
-	doxygen-objc/html/*
+	doxygen/html/*
 
 doxygen/html/*:
 	cd $(srcdir) && doxygen Doxyfile
-# scp -r doxygen skonno,clinkc@frs.sourceforge.net:/home/groups/c/cl/clinkc/htdocs
-
-doxygen-objc/html/*:
-	cd $(srcdir) && doxygen Doxyfile.objc
-# scp -r doxygen-objc skonno,clinkobjc@frs.sourceforge.net:/home/groups/c/cl/clinkobjc/htdocs
+# scp -r doxygen skonno,uhttp@frs.sourceforge.net:/home/groups/c/cl/uhttp/htdocs
 
 deb: dist
 	-mkdir $(top_builddir)/debian-build
