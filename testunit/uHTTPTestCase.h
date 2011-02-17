@@ -11,10 +11,13 @@ class uHTTPTestCase : public CPPUNIT_NS::TestFixture
 	CPPUNIT_TEST( testMutex );
 	CPPUNIT_TEST( testThread );
 	CPPUNIT_TEST( testLog );
+	CPPUNIT_TEST( testLogMultiThread );
+	CPPUNIT_TEST( testLogFile );
+	CPPUNIT_TEST( testLogFileMultiThread );
 	CPPUNIT_TEST( testURI );
 	CPPUNIT_TEST( testNetworkInterface );
 	CPPUNIT_TEST( testHttpServer );
-  
+
 	CPPUNIT_TEST_SUITE_END();
 
 public:
@@ -28,6 +31,9 @@ protected:
 	void testMutex();
 	void testThread();
 	void testLog();
+	void testLogMultiThread();
+	void testLogFile();
+	void testLogFileMultiThread();
 	void testURI();
 	void testNetworkInterface();
 	void testHttpServer();

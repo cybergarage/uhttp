@@ -26,6 +26,7 @@
 
 #include <cybergarage/util/clog.h>
 #include <cybergarage/util/cstring.h>
+#include <cybergarage/util/cmutex.h>
 
 #if defined(WIN32)
 #define snprintf _snprintf
@@ -57,6 +58,8 @@ struct fd_list
 static struct fd_list *descriptor_list = NULL; /* Contains logging targets (single linked list) */
 static int initialized = 0;
 static char *separator = NULL; /* Log item separator */
+
+static CgMutex *(print_mutex) = NULL;
 
 /* Local helper functions */
 
@@ -217,6 +220,11 @@ void cg_log_print(int severity, const char *file, int line_n, const char *functi
 	/* If separator is not set, do it now */
 	if (NULL == separator) cg_log_set_separator(" : ");
 
+	/* Create a mutex */
+	if (!print_mutex)
+		print_mutex = cg_mutex_new();
+	cg_mutex_lock(print_mutex);
+	
 	/* Create timestamp for the log prefix */
 	timestamp = time(NULL);
 	timestamp_human_readable = localtime(&timestamp);
@@ -261,6 +269,8 @@ void cg_log_print(int severity, const char *file, int line_n, const char *functi
 			fputs(log_line, temp->fd);
 		}
 	}
+
+	cg_mutex_unlock(print_mutex);
 }
 
 #if defined(WIN32)
