@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2161EF4E130DA17D005FB1FB /* libuhttp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F7BA74130DA08F00F0B52E /* libuhttp.a */; };
+		21F7BA53130D9F4200F0B52E /* cppunitmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F7BA52130D9F4200F0B52E /* cppunitmain.cpp */; };
+		21F7BA5D130D9F5900F0B52E /* uHTTPTestCase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F7BA54130D9F5900F0B52E /* uHTTPTestCase.cpp */; };
+		21F7BA5E130D9F5900F0B52E /* uHTTPTestCaseDictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F7BA56130D9F5900F0B52E /* uHTTPTestCaseDictionary.cpp */; };
+		21F7BA5F130D9F5900F0B52E /* uHTTPTestCaseHttp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F7BA57130D9F5900F0B52E /* uHTTPTestCaseHttp.cpp */; };
+		21F7BA60130D9F5900F0B52E /* uHTTPTestCaseLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F7BA58130D9F5900F0B52E /* uHTTPTestCaseLog.cpp */; };
+		21F7BA61130D9F5900F0B52E /* uHTTPTestCaseMutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F7BA59130D9F5900F0B52E /* uHTTPTestCaseMutex.cpp */; };
+		21F7BA62130D9F5900F0B52E /* uHTTPTestCaseNetwork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F7BA5A130D9F5900F0B52E /* uHTTPTestCaseNetwork.cpp */; };
+		21F7BA63130D9F5900F0B52E /* uHTTPTestCaseThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F7BA5B130D9F5900F0B52E /* uHTTPTestCaseThread.cpp */; };
+		21F7BA64130D9F5900F0B52E /* uHTTPTestCaseURI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F7BA5C130D9F5900F0B52E /* uHTTPTestCaseURI.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21F7BA73130DA08F00F0B52E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21F7BA6C130DA08F00F0B52E /* libuhttp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC046055464E500DB518D;
+			remoteInfo = libuhttp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		21F7BA52130D9F4200F0B52E /* cppunitmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cppunitmain.cpp; path = ../../cppunitmain.cpp; sourceTree = SOURCE_ROOT; };
+		21F7BA54130D9F5900F0B52E /* uHTTPTestCase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uHTTPTestCase.cpp; path = ../../uHTTPTestCase.cpp; sourceTree = SOURCE_ROOT; };
+		21F7BA55130D9F5900F0B52E /* uHTTPTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = uHTTPTestCase.h; path = ../../uHTTPTestCase.h; sourceTree = SOURCE_ROOT; };
+		21F7BA56130D9F5900F0B52E /* uHTTPTestCaseDictionary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uHTTPTestCaseDictionary.cpp; path = ../../uHTTPTestCaseDictionary.cpp; sourceTree = SOURCE_ROOT; };
+		21F7BA57130D9F5900F0B52E /* uHTTPTestCaseHttp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uHTTPTestCaseHttp.cpp; path = ../../uHTTPTestCaseHttp.cpp; sourceTree = SOURCE_ROOT; };
+		21F7BA58130D9F5900F0B52E /* uHTTPTestCaseLog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uHTTPTestCaseLog.cpp; path = ../../uHTTPTestCaseLog.cpp; sourceTree = SOURCE_ROOT; };
+		21F7BA59130D9F5900F0B52E /* uHTTPTestCaseMutex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uHTTPTestCaseMutex.cpp; path = ../../uHTTPTestCaseMutex.cpp; sourceTree = SOURCE_ROOT; };
+		21F7BA5A130D9F5900F0B52E /* uHTTPTestCaseNetwork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uHTTPTestCaseNetwork.cpp; path = ../../uHTTPTestCaseNetwork.cpp; sourceTree = SOURCE_ROOT; };
+		21F7BA5B130D9F5900F0B52E /* uHTTPTestCaseThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uHTTPTestCaseThread.cpp; path = ../../uHTTPTestCaseThread.cpp; sourceTree = SOURCE_ROOT; };
+		21F7BA5C130D9F5900F0B52E /* uHTTPTestCaseURI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uHTTPTestCaseURI.cpp; path = ../../uHTTPTestCaseURI.cpp; sourceTree = SOURCE_ROOT; };
+		21F7BA6C130DA08F00F0B52E /* libuhttp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libuhttp.xcodeproj; path = ../../../lib/macosx/xcode/libuhttp.xcodeproj; sourceTree = SOURCE_ROOT; };
+		8DD76F6C0486A84900D96B5E /* uHttpTestCase */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = uHttpTestCase; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2161EF4E130DA17D005FB1FB /* libuhttp.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* uHttpTestCase */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6859E8C029090F304C91782 /* Documentation */,
+				21F7BA6B130DA05300F0B52E /* Framework */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = uHttpTestCase;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				21F7BA54130D9F5900F0B52E /* uHTTPTestCase.cpp */,
+				21F7BA55130D9F5900F0B52E /* uHTTPTestCase.h */,
+				21F7BA56130D9F5900F0B52E /* uHTTPTestCaseDictionary.cpp */,
+				21F7BA57130D9F5900F0B52E /* uHTTPTestCaseHttp.cpp */,
+				21F7BA58130D9F5900F0B52E /* uHTTPTestCaseLog.cpp */,
+				21F7BA59130D9F5900F0B52E /* uHTTPTestCaseMutex.cpp */,
+				21F7BA5A130D9F5900F0B52E /* uHTTPTestCaseNetwork.cpp */,
+				21F7BA5B130D9F5900F0B52E /* uHTTPTestCaseThread.cpp */,
+				21F7BA5C130D9F5900F0B52E /* uHTTPTestCaseURI.cpp */,
+				21F7BA52130D9F4200F0B52E /* cppunitmain.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* uHttpTestCase */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21F7BA6B130DA05300F0B52E /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				21F7BA6C130DA08F00F0B52E /* libuhttp.xcodeproj */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		21F7BA6D130DA08F00F0B52E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21F7BA74130DA08F00F0B52E /* libuhttp.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6859E8C029090F304C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* uHttpTestCase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "uHttpTestCase" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = uHttpTestCase;
+			productInstallPath = "$(HOME)/bin";
+			productName = uHttpTestCase;
+			productReference = 8DD76F6C0486A84900D96B5E /* uHttpTestCase */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "uHttpTestCase" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* uHttpTestCase */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 21F7BA6D130DA08F00F0B52E /* Products */;
+					ProjectRef = 21F7BA6C130DA08F00F0B52E /* libuhttp.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* uHttpTestCase */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		21F7BA74130DA08F00F0B52E /* libuhttp.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libuhttp.a;
+			remoteRef = 21F7BA73130DA08F00F0B52E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21F7BA53130D9F4200F0B52E /* cppunitmain.cpp in Sources */,
+				21F7BA5D130D9F5900F0B52E /* uHTTPTestCase.cpp in Sources */,
+				21F7BA5E130D9F5900F0B52E /* uHTTPTestCaseDictionary.cpp in Sources */,
+				21F7BA5F130D9F5900F0B52E /* uHTTPTestCaseHttp.cpp in Sources */,
+				21F7BA60130D9F5900F0B52E /* uHTTPTestCaseLog.cpp in Sources */,
+				21F7BA61130D9F5900F0B52E /* uHTTPTestCaseMutex.cpp in Sources */,
+				21F7BA62130D9F5900F0B52E /* uHTTPTestCaseNetwork.cpp in Sources */,
+				21F7BA63130D9F5900F0B52E /* uHTTPTestCaseThread.cpp in Sources */,
+				21F7BA64130D9F5900F0B52E /* uHTTPTestCaseURI.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = uHttpTestCase;
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = uHttpTestCase;
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../include,
+					/opt/local/include/,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-L/opt/local/lib/",
+					"-lcppunit",
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../include,
+					/opt/local/include/,
+				);
+				OTHER_LDFLAGS = (
+					"-L/opt/local/lib/",
+					"-lcppunit",
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "uHttpTestCase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "uHttpTestCase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
