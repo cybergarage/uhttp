@@ -11,6 +11,9 @@ uhttptestunit_SOURCES = \
 	../uHTTPTestCaseHttp.cpp \
 	../uHTTPTestCaseNetwork.cpp \
 	../uHTTPTestCaseURI.cpp \
+	../uHTTPTestCaseLog.cpp \
+	../uHTTPTestCaseMutex.cpp \
+	../uHTTPTestCaseThread.cpp \
 	../cppunitmain.cpp
 
 #if HAVE_LIBTOOL

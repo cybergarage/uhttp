@@ -1,0 +1,4 @@
+2011-02-17 Satoshi Konno <skonno@cybergarage.org>
+	* Added 'extenn "C"' define into clog.h.
+2010-11-18 Satoshi Konno <skonno@cybergarage.org>
+	* First import from CyberLink for C.
