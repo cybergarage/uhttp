@@ -20,6 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		21ADB39F13319F9A00ED2800 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21F7BA6C130DA08F00F0B52E /* libuhttp.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = libuhttp;
+		};
 		21F7BA73130DA08F00F0B52E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 21F7BA6C130DA08F00F0B52E /* libuhttp.xcodeproj */;
@@ -141,6 +148,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				21ADB3A013319F9A00ED2800 /* PBXTargetDependency */,
 			);
 			name = uHttpTestCase;
 			productInstallPath = "$(HOME)/bin";
@@ -206,6 +214,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21ADB3A013319F9A00ED2800 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libuhttp;
+			targetProxy = 21ADB39F13319F9A00ED2800 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB923208733DC60010E9CD /* Debug */ = {

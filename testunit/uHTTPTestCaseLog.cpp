@@ -106,4 +106,3 @@ void uHTTPTestCase::testLogFileMultiThread()
 	cg_mutex_delete(CgTestThreadInfoLoglMutex);
 	
 }
-

@@ -213,7 +213,11 @@ void cg_log_print(int severity, const char *file, int line_n, const char *functi
 	struct fd_list *temp = NULL;
 	time_t timestamp;
 	struct tm *timestamp_human_readable;
-	
+
+	/* If output targets are empty, do return */
+    if (!descriptor_list)
+		return;
+
 	/* If logger is not initialized, do it now */
 	if (!initialized) log_init_with_defaults();
 

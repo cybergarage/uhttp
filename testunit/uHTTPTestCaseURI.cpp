@@ -1,9 +1,10 @@
 #include "uHTTPTestCase.h"
 
 #include <cybergarage/net/curi.h>
+#include <cybergarage/util/clog.h>
 
 ////////////////////////////////////////
-// testNetworkInterface
+// testURI
 ////////////////////////////////////////
 
 #define UHTTP_TESTCASE_NET_URI_PATH "/test.cgi"
@@ -40,3 +41,72 @@ void uHTTPTestCase::testURI()
 
 	cg_net_uri_delete(uri);
 }
+
+////////////////////////////////////////
+// testAbsoluteURI
+////////////////////////////////////////
+
+#define UHTTP_TESTCASE_NET_ABSOLUTEURI "http://www.yahoo.co.jp:80/rss.xml"
+
+#define UHTTP_TESTCASE_NET_ABSOLUTEURI_HOST_01 "http://www.yahoo.co.jp"
+#define UHTTP_TESTCASE_NET_ABSOLUTEURI_PATH_01 "rss.xml"
+
+#define UHTTP_TESTCASE_NET_ABSOLUTEURI_HOST_02 "http://www.yahoo.co.jp"
+#define UHTTP_TESTCASE_NET_ABSOLUTEURI_PATH_02 "/rss.xml"
+
+#define UHTTP_TESTCASE_NET_ABSOLUTEURI_HOST_03 "http://www.yahoo.co.jp/"
+#define UHTTP_TESTCASE_NET_ABSOLUTEURI_PATH_03 "/rss.xml"
+
+#define UHTTP_TESTCASE_NET_ABSOLUTEURI_HOST_04 "http://www.yahoo.co.jp/"
+#define UHTTP_TESTCASE_NET_ABSOLUTEURI_PATH_04 "rss.xml"
+
+#define UHTTP_TESTCASE_NET_ABSOLUTEURI_HOST_05 "http://www.yahoo.co.jp"
+#define UHTTP_TESTCASE_NET_ABSOLUTEURI_PATH_05 "rss.xml"
+
+void uHTTPTestCase::testAbsoluteURI()
+{
+	CgNetURI *uri;
+    char *uriString;
+    
+    uri = cg_net_uri_new();
+	cg_net_uri_setvalue(uri, UHTTP_TESTCASE_NET_ABSOLUTEURI_HOST_01);
+    cg_net_uri_setpath(uri, UHTTP_TESTCASE_NET_ABSOLUTEURI_PATH_01);
+    uriString = cg_net_uri_getvalue(uri);
+	cg_log_info("%s\n", uriString);
+	CPPUNIT_ASSERT(cg_streq(uriString, UHTTP_TESTCASE_NET_ABSOLUTEURI));
+	cg_net_uri_delete(uri);
+    
+    uri = cg_net_uri_new();
+	cg_net_uri_setvalue(uri, UHTTP_TESTCASE_NET_ABSOLUTEURI_HOST_02);
+    cg_net_uri_setpath(uri, UHTTP_TESTCASE_NET_ABSOLUTEURI_PATH_02);
+    uriString = cg_net_uri_getvalue(uri);
+	cg_log_info("%s\n", uriString);
+	CPPUNIT_ASSERT(cg_streq(uriString, UHTTP_TESTCASE_NET_ABSOLUTEURI));
+	cg_net_uri_delete(uri);
+
+    uri = cg_net_uri_new();
+	cg_net_uri_setvalue(uri, UHTTP_TESTCASE_NET_ABSOLUTEURI_HOST_03);
+    cg_net_uri_setpath(uri, UHTTP_TESTCASE_NET_ABSOLUTEURI_PATH_03);
+    uriString = cg_net_uri_getvalue(uri);
+	cg_log_info("%s\n", uriString);
+	CPPUNIT_ASSERT(cg_streq(uriString, UHTTP_TESTCASE_NET_ABSOLUTEURI));
+	cg_net_uri_delete(uri);    
+
+    uri = cg_net_uri_new();
+	cg_net_uri_setvalue(uri, UHTTP_TESTCASE_NET_ABSOLUTEURI_HOST_04);
+    cg_net_uri_setpath(uri, UHTTP_TESTCASE_NET_ABSOLUTEURI_PATH_04);
+    uriString = cg_net_uri_getvalue(uri);
+	cg_log_info("%s\n", uriString);
+	CPPUNIT_ASSERT(cg_streq(uriString, UHTTP_TESTCASE_NET_ABSOLUTEURI));
+	cg_net_uri_delete(uri);    
+
+    uri = cg_net_uri_new();
+	cg_net_uri_setvalue(uri, UHTTP_TESTCASE_NET_ABSOLUTEURI_HOST_05);
+    cg_net_uri_setpath(uri, UHTTP_TESTCASE_NET_ABSOLUTEURI_PATH_05);
+    uriString = cg_net_uri_getvalue(uri);
+	cg_log_info("%s\n", uriString);
+	CPPUNIT_ASSERT(cg_streq(uriString, UHTTP_TESTCASE_NET_ABSOLUTEURI));
+	cg_net_uri_delete(uri);    
+}
+
+
